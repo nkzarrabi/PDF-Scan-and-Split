@@ -1,0 +1,35 @@
+GitHub Copilot: # automation.py
+
+This script is used for automating the process of splitting a scanned PDF file into multiple PDF files based on the information provided in an Excel CSV file.
+
+## Dependencies
+
+- os
+- shutil
+- pandas
+- PyPDF2
+
+## How it works
+
+1. The script first asks for the name of the scanned PDF file and the Excel CSV file.
+2. It reads the scanned PDF file and the Excel CSV file.
+3. It creates a new PDF file for each page in the scanned PDF file.
+4. It reads the 'Names' and 'Page Num' columns from the Excel CSV file.
+5. It checks if the total number of pages in the scanned PDF file matches the total 'Page Num' in the Excel CSV file.
+6. If they match, it merges the appropriate number of PDF files based on the 'Page Num' and saves them with the corresponding 'Names' from the Excel CSV file.
+7. It then moves the newly created PDF files to a 'Scans' directory.
+
+## Usage
+
+Run the script and provide the names of the scanned PDF file and the Excel CSV file when prompted.
+
+```bash
+python automation.py
+```
+
+## Note
+
+- The scanned PDF file and the Excel CSV file should be in the same directory as the script.
+- The 'Scans' directory should also be in the same directory as the script.
+- The 'Names' column in the Excel CSV file should contain the names for the new PDF files.
+- The 'Page Num' column in the Excel CSV file should contain the number of pages for each new PDF file.
